@@ -85,7 +85,7 @@ Al seleccionar "OK" el programa nos regresará a la ventana de Menu usuario.
 
 Al seleccionar la opcion nos dirigiremos a la ventana de sistema de busqueda en donde podremos elegir la visualizacion de dos tablas: Huespedes y Reservas; las tablas estarán ligadas por el numero de reserva.
 
-##### Huespedes:
+##### Huespedes: 
 
 ![busqueda-huespedes](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/238a65d3-f93d-4dc8-9011-1df107321cd9)
 
