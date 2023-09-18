@@ -27,6 +27,11 @@ public class HuespedesController {
 			return this.huespedDAO.buscarId(id);
 		}
 		
+
+		public List<Huespedes> listarHuespedesApellido(String apellido) {
+			return this.huespedDAO.buscarApellido(apellido);
+		}
+		
 		public void actualizar(String nombre, String apellido, Date fechaN, String nacionalidad, String telefono, Integer idReserva, Integer id) {
 			this.huespedDAO.Actualizar(nombre, apellido, fechaN, nacionalidad, telefono, idReserva, id);
 		}
@@ -34,4 +39,5 @@ public class HuespedesController {
 		public void Eliminar(Integer id) {
 			this.huespedDAO.Eliminar(id);
 		}
+
 }

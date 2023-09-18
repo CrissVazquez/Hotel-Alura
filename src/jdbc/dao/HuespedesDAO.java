@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jdbc.modelo.Huespedes;
-import jdbc.modelo.Reserva;
 
 
 public class HuespedesDAO {
@@ -22,7 +21,9 @@ private Connection connection;
 	
 	public void guardar(Huespedes huesped) {
 		try {
-			String sql = "INSERT INTO huespedes (nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva) VALUES (?, ?, ?, ?,?,?)";
+			String sql = "INSERT INTO tbhuespedes"
+					+ " (nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva) "
+					+ "VALUES (?, ?, ?, ?,?,?)";
 
 			try (PreparedStatement pstm = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
@@ -48,7 +49,7 @@ private Connection connection;
 	public List<Huespedes> listarHuespedes() {
 		List<Huespedes> huespedes = new ArrayList<Huespedes>();
 		try {
-			String sql = "SELECT id, nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva FROM huespedes";
+			String sql = "SELECT id, nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva FROM tbhuespedes";
 
 			try (PreparedStatement pstm = connection.prepareStatement(sql)) {
 				pstm.execute();
@@ -65,7 +66,7 @@ private Connection connection;
 		List<Huespedes> huespedes = new ArrayList<Huespedes>();
 		try {
 
-			String sql = "SELECT id, nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva FROM huespedes WHERE idReserva = ?";
+			String sql = "SELECT id, nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva FROM tbhuespedes WHERE idReserva = ?";
 
 			try (PreparedStatement pstm = connection.prepareStatement(sql)) {
 				pstm.setString(1, id);
@@ -79,9 +80,28 @@ private Connection connection;
 		}
 	}
 	
+	public List<Huespedes> buscarApellido(String apellido) {
+		List<Huespedes> huespedes = new ArrayList<Huespedes>();
+		try {
+
+			String sql = "SELECT id, nombre, apellido, fecha_nacimiento, nacionalidad, telefono, idReserva FROM tbhuespedes WHERE apellido = ?";
+
+			try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+				pstm.setString(1, apellido);
+				pstm.execute();
+
+				transformarResultSetEnHuesped(huespedes, pstm);
+			}
+			return huespedes;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
 	public void Actualizar(String nombre, String apellido, Date fechaN, String nacionalidad, String telefono, Integer idReserva, Integer id) {
 		try (PreparedStatement stm = connection
-				.prepareStatement("UPDATE huespedes SET nombre = ?, apellido = ?, fecha_nacimiento = ?, nacionalidad = ?, telefono = ?, idReserva = ? WHERE id = ?")) {
+				.prepareStatement("UPDATE tbhuespedes SET nombre = ?, apellido = ?, fecha_nacimiento = ?, nacionalidad = ?, telefono = ?, idReserva = ? WHERE id = ?")) {
 			stm.setString(1, nombre);
 			stm.setString(2, apellido);
 			stm.setDate(3, fechaN);
@@ -95,7 +115,7 @@ private Connection connection;
 		}
 	}
 	public void Eliminar(Integer id) {
-		try (PreparedStatement stm = connection.prepareStatement("DELETE FROM huespedes WHERE id = ?")) {
+		try (PreparedStatement stm = connection.prepareStatement("DELETE FROM tbhuespedes WHERE id = ?")) {
 			stm.setInt(1, id);
 			stm.execute();
 		} catch (SQLException e) {
@@ -110,9 +130,6 @@ private Connection connection;
 				reservas.add(huespedes);
 			}
 		}				
-	}
-	
-	
-		
+	}	
 }
 

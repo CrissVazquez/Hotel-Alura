@@ -190,7 +190,7 @@ public class RegistroHuesped extends JFrame {
 		contentPane.add(txtTelefono);
 		
 		JLabel lblNewLabel_4 = new JLabel("REGISTRO HUÉSPED");
-		lblNewLabel_4.setBounds(606, 55, 234, 42);
+		lblNewLabel_4.setBounds(580, 57, 253, 42);
 		lblNewLabel_4.setForeground(new Color(12, 138, 199));
 		lblNewLabel_4.setFont(new Font("Roboto Black", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_4);

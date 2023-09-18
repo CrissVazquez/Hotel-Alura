@@ -33,7 +33,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.sql.Date;
-
 import javax.swing.JScrollPane;
 
 @SuppressWarnings("serial")
@@ -73,6 +72,7 @@ public class Busqueda extends JFrame {
 	 * Create the frame.
 	 */
 	public Busqueda() {
+		
 		this.reservaController = new ReservasController();
 		this.huespedesController = new HuespedesController();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Busqueda.class.getResource("/imagenes/lupa2.png")));
@@ -97,7 +97,7 @@ public class Busqueda extends JFrame {
 		
 		
 		JLabel lblTitulo = new JLabel("SISTEMA DE BÚSQUEDA");
-		lblTitulo.setBounds(331, 62, 280, 42);
+		lblTitulo.setBounds(306, 62, 297, 42);
 		lblTitulo.setForeground(new Color(12, 138, 199));
 		lblTitulo.setFont(new Font("Roboto Black", Font.BOLD, 24));
 		contentPane.add(lblTitulo);
@@ -123,9 +123,6 @@ public class Busqueda extends JFrame {
 		modeloHuesped.addColumn("Numero de Reserva");
 		LlenarTablaHuespedes();
 
-		
-		
-		
 		tbReservas = new JTable();
 		tbReservas.setFont(new Font("Roboto", Font.PLAIN, 16));
 		panel.addTab("Reservas", new ImageIcon(Busqueda.class.getResource("/imagenes/reservado.png")), tbReservas, null);
@@ -134,9 +131,8 @@ public class Busqueda extends JFrame {
 		modelo.addColumn("Fecha Check In");
 		modelo.addColumn("Fecha Check Out");
 		modelo.addColumn("Valor");
-		modelo.addColumn("Forma de Pago");
-		tbReservas.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-		
+		modelo.addColumn("Forma de Pago");		
+		tbReservas.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);		
 		LlenarTablaReservas();
 		
 		JLabel logo = new JLabel("");
@@ -242,6 +238,7 @@ public class Busqueda extends JFrame {
 				} else {
 				LlenarTablaReservasId();
 				LlenarTablaHuespedesId();
+				LlenarTablaHuespedesApellido();
 			}
 				}
 		});
@@ -354,12 +351,17 @@ public class Busqueda extends JFrame {
 	private List<Reserva> BuscarReservasId() {
 		return this.reservaController.buscarId(txtBuscar.getText());
 	} 
+	
 	private List<Huespedes> BuscarHuespedes() {
 		return this.huespedesController.listarHuespedes();
 	}
 	
 	private List<Huespedes> BuscarHuespedesId() {
 		return this.huespedesController.listarHuespedesId(txtBuscar.getText());
+	}
+	
+	private List<Huespedes> BuscarHuespedesApellido() {
+		return this.huespedesController.listarHuespedesApellido(txtBuscar.getText());
 	}
 	
 	private void limpiarTabla() {
@@ -407,6 +409,18 @@ public class Busqueda extends JFrame {
 	private void LlenarTablaHuespedesId() {			       
 	    //Llenar Tabla
 		List<Huespedes> huesped = BuscarHuespedesId();
+		try {
+			for (Huespedes huespedes : huesped) {
+				modeloHuesped.addRow(new Object[] { huespedes.getId(), huespedes.getNombre(), huespedes.getApellido(), huespedes.getFechaNacimiento(), huespedes.getNacionalidad(), huespedes.getTelefono(), huespedes.getIdReserva() });
+			}
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+	
+	private void LlenarTablaHuespedesApellido() {			       
+	    //Llenar Tabla
+		List<Huespedes> huesped = BuscarHuespedesApellido();
 		try {
 			for (Huespedes huespedes : huesped) {
 				modeloHuesped.addRow(new Object[] { huespedes.getId(), huespedes.getNombre(), huespedes.getApellido(), huespedes.getFechaNacimiento(), huespedes.getNacionalidad(), huespedes.getTelefono(), huespedes.getIdReserva() });

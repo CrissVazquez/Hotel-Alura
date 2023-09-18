@@ -83,8 +83,8 @@ public class ReservasView extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
-		panel.setBackground(Color.WHITE);
-		panel.setBounds(0, 0, 910, 560);
+		panel.setBackground(new Color(255, 255, 255));
+		panel.setBounds(10, 0, 910, 560);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
@@ -108,8 +108,8 @@ public class ReservasView extends JFrame {
 
 		JLabel lblValor = new JLabel("VALOR DE LA RESERVA");
 		lblValor.setForeground(SystemColor.textInactiveText);
-		lblValor.setBounds(72, 303, 196, 14);
-		lblValor.setFont(new Font("Roboto Black", Font.PLAIN, 16));
+		lblValor.setBounds(68, 302, 231, 24);
+		lblValor.setFont(new Font("Dialog", Font.PLAIN, 18));
 		panel.add(lblValor);
 
 		JLabel lblFormaPago = new JLabel("FORMA DE PAGO");
@@ -119,13 +119,13 @@ public class ReservasView extends JFrame {
 		panel.add(lblFormaPago);
 
 		JLabel lblTitulo = new JLabel("SISTEMA DE RESERVAS");
-		lblTitulo.setBounds(109, 60, 219, 42);
+		lblTitulo.setBounds(95, 61, 248, 42);
 		lblTitulo.setForeground(new Color(12, 138, 199));
 		lblTitulo.setFont(new Font("Roboto", Font.BOLD, 20));
 		panel.add(lblTitulo);
 
 		JPanel fondoImagen = new JPanel();
-		fondoImagen.setBounds(428, 0, 482, 560);
+		fondoImagen.setBounds(418, 0, 482, 560);
 		fondoImagen.setBackground(new Color(12, 138, 199));
 		panel.add(fondoImagen);
 		fondoImagen.setLayout(null);
@@ -229,6 +229,7 @@ public class ReservasView extends JFrame {
 		panel.add(separator_1);
 		
 		JLabel lblSiguiente = new JLabel("SIGUIENTE");
+		lblSiguiente.setBackground(new Color(255, 255, 255));
 		lblSiguiente.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSiguiente.setForeground(Color.WHITE);
 		lblSiguiente.setFont(new Font("Roboto", Font.PLAIN, 18));
@@ -270,7 +271,7 @@ public class ReservasView extends JFrame {
 		txtValor.setBackground(SystemColor.text);
 		txtValor.setHorizontalAlignment(SwingConstants.CENTER);
 		txtValor.setForeground(Color.BLACK);
-		txtValor.setBounds(78, 328, 43, 33);
+		txtValor.setBounds(68, 328, 84, 33);
 		txtValor.setEditable(false);
 		txtValor.setFont(new Font("Roboto Black", Font.BOLD, 17));
 		txtValor.setBorder(javax.swing.BorderFactory.createEmptyBorder());
@@ -303,6 +304,18 @@ public class ReservasView extends JFrame {
 		panel.add(btnsiguiente);
 		btnsiguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		btnsiguiente.add(lblSiguiente);		
+		
+		JLabel lblNewLabel = new JLabel("FECHA DE ENTRADA");
+		lblNewLabel.setForeground(SystemColor.textInactiveText);
+		lblNewLabel.setFont(new Font("Dialog", Font.PLAIN, 18));
+		lblNewLabel.setBounds(68, 127, 231, 24);
+		panel.add(lblNewLabel);
+		
+		JLabel lblFechaDeSalida = new JLabel("FECHA DE SALIDA");
+		lblFechaDeSalida.setForeground(SystemColor.textInactiveText);
+		lblFechaDeSalida.setFont(new Font("Dialog", Font.PLAIN, 18));
+		lblFechaDeSalida.setBounds(68, 207, 231, 24);
+		panel.add(lblFechaDeSalida);
 	}
 	
 	private void guardarReserva() {	
@@ -324,7 +337,7 @@ public class ReservasView extends JFrame {
 			Calendar inicio = fechaE.getCalendar();
 			Calendar fin = fechaS.getCalendar();
 			int dias = -1; // Usamos -1 para contar a partir del dia siguiente
-			int diaria = 500;
+			int diaria = 900;
 			int valor;
 			
 			while(inicio.before(fin)||inicio.equals(fin)) {
@@ -332,7 +345,7 @@ public class ReservasView extends JFrame {
 				inicio.add(Calendar.DATE,1); //dias a ser aumentados
 			}
 			valor = dias * diaria;
-			txtValor.setText("$" + valor);
+			txtValor.setText(valor + " MXN.");
 		}
 	}
 	
