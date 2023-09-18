@@ -19,14 +19,14 @@
 
 ---
 ### Menú principal:
-![menú-principal](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/9d7fe2ff-e0db-4632-9936-67e5ad325463)
+![menú-principal](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/0f1b5cb8-650e-4103-81be-7dc55079c110)
 
 Esta es la primera ventana que se abrirá al ejecutar el programa, en la cual podremos comenzar con el inicio de sesión dando click en la imagen debajo de "*Login*". Dicha acción nos dirigirá a la siguiente ventana.
 
 ---
 
 ### Login:
-![Login](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/09d9f1a1-b6e9-426b-a70d-ad5e8bf44e34)
+![Login](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/ec45d588-bd60-46d5-be55-eb8dcb659397)
 
 Login será nuestra siguiente ventana, aquí autentificaremos nuestra identidad escribiendo la palabra 'admin' como "*USUARIO*" y "*CONTRASEÑA*". Al colocar correctamente la palabra mencionada, podremos acceder al programa, caso contrario nos arrojara un mensaje indicando: "Usuario o Contraseña no válidos".
 
