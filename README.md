@@ -75,7 +75,7 @@ El **numero de reserva** será otrogado automaticamente por el sistema al usuari
 ### Éxito:
 Procederemos a dar doble click en "GUARDAR". En caso de haber registrado satisfactoriamente todos los datos solicitados nos saltara el siguiente mensaje: 
 
-![exito](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/4fd38046-d125-4078-add2-b16ee7833555)
+![exito](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/c6c79e7b-7d9e-4bee-872a-0795de6cbc43)
 
 Al seleccionar "OK" el programa nos regresará a la ventana de Menu usuario.
 
@@ -87,11 +87,11 @@ Al seleccionar la opcion nos dirigiremos a la ventana de sistema de busqueda en 
 
 ##### Huespedes:
 
-![busqueda-huespedes](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/a77081ae-c314-4ba7-a486-0b8012ab7e96)
+![busqueda-huespedes](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/238a65d3-f93d-4dc8-9011-1df107321cd9)
 
 ##### Reservas:
 
-![busqueda-reservas](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/2b909f54-ae4d-4e69-84c5-222939360b4c)
+![busqueda-reservas](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/499d7cee-6c26-4668-b116-8f5f92a24a32)
 
 En dichas tablas tendremos la posibilidad de buscar por numero de reserva y por el apellido del huesped.
 
