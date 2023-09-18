@@ -25,7 +25,7 @@ Esta es la primera ventana que se abrirá al ejecutar el programa, en la cual po
 
 ---
 
-### Login:
+### Login: 
 ![Login](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/ec45d588-bd60-46d5-be55-eb8dcb659397)
 
 Login será nuestra siguiente ventana, aquí autentificaremos nuestra identidad escribiendo la palabra 'admin' como "*USUARIO*" y "*CONTRASEÑA*". Al colocar correctamente la palabra mencionada, podremos acceder al programa, caso contrario nos arrojara un mensaje indicando: "Usuario o Contraseña no válidos".
