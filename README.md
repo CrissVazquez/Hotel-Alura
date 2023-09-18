@@ -50,9 +50,9 @@ En caso de escribir la contraseña de manera satisfactoria accederemos a la vent
 
 En ella podremos seleccionar tanto la fecha del check-in y check-out; al completar esta acción, automaticamente se nos mostrara el valor a pagar por la reserva, el cual está dictado por un precio fijo de 900 pesos mexicanos por noche. Para finalizar con la reserva seleccionaremos el metodo de pago, el cual puede ser:
 
--Tarjeta de Débito.
--Tarjeta de Crédito.
--Pago en Efectivo.
+- Tarjeta de Débito.
+- Tarjeta de Crédito.
+- Pago en Efectivo.
 
 ---
 
@@ -62,11 +62,11 @@ En ella podremos seleccionar tanto la fecha del check-in y check-out; al complet
 
 Al dar doble click en el botón "*SIGUIENTE*" de la ventana de reservas, podremos continuar con el registro de los datos del huesped, donde deberemos ingresar los siguientes datos:
 
--**Nombre** (Nombres en caso de tener más de uno).
--**Apellidos.**
--**Fecha de nacimiento.**
--**Nacionalidad.**
--**Teléfono.**
+- **Nombre** (Nombres en caso de tener más de uno).
+- **Apellidos.**
+- **Fecha de nacimiento.**
+- **Nacionalidad.**
+- **Teléfono.**
 
 El **numero de reserva** será otrogado automaticamente por el sistema al usuario.
 
