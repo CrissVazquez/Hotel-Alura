@@ -34,7 +34,7 @@ Login será nuestra siguiente ventana, aquí autentificaremos nuestra identidad 
 
 ### Menú usuario:
 
-![menu-usuario](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/82caa53a-4c7b-45a1-ae81-6655b4426f56)
+![menu-usuario](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/2005b15a-16df-484a-bae0-58b61e80f479)
 
 En caso de escribir la contraseña de manera satisfactoria accederemos a la ventana del usuario donde tendremos a nuestra disposición las siguientes funcionalidades:
 
@@ -46,7 +46,7 @@ En caso de escribir la contraseña de manera satisfactoria accederemos a la vent
 
 ### Sistema de reservas:
 
-![reservas](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/8bd21d91-1930-476b-bf96-daf8256c3e84)
+![reservas](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/ce58727b-b894-485e-a598-8a6e899ccd4e)
 
 En ella podremos seleccionar tanto la fecha del check-in y check-out; al completar esta acción, automaticamente se nos mostrara el valor a pagar por la reserva, el cual está dictado por un precio fijo de 900 pesos mexicanos por noche. Para finalizar con la reserva seleccionaremos el metodo de pago, el cual puede ser:
 
@@ -58,7 +58,7 @@ En ella podremos seleccionar tanto la fecha del check-in y check-out; al complet
 
 ### Refistro de huésped:
 
-![huespedes](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/d2a2cd43-4938-47a8-ba60-dfc629194594)
+![huespedes](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/d18e8a9a-e4a4-4317-88cf-436637136a79)
 
 Al dar doble click en el botón "*SIGUIENTE*" de la ventana de reservas, podremos continuar con el registro de los datos del huesped, donde deberemos ingresar los siguientes datos:
 
