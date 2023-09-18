@@ -1,6 +1,6 @@
 # Challenge One Hotel Alura
 
-![menú-principal](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/af1d6690-85fe-439a-9e6f-f6a4324311b7)
+![menú-principal](https://github.com/CrissVazquez/Hotel-Alura/assets/135062723/0f1b5cb8-650e-4103-81be-7dc55079c110)
 
 
 
