@@ -39,7 +39,7 @@ Login será nuestra siguiente ventana, aquí autentificaremos nuestra identidad 
 En caso de escribir la contraseña de manera satisfactoria accederemos a la ventana del usuario donde tendremos a nuestra disposición las siguientes funcionalidades:
 
 -**Registro de Reservas y Huéspedes.**
--**Edición de Reservas y Huéspedes existente**s.
+-**Edición de Reservas y Huéspedes existentes**.
 -**Eliminar todo tipo de Registros.**
 
 ---
@@ -66,8 +66,8 @@ Al dar doble click en el botón "*SIGUIENTE*" de la ventana de reservas, podremo
 -**Apellidos.**
 -**Fecha de nacimiento.**
 -**Nacionalidad.**
--**Teléfono.
-**
+-**Teléfono.**
+
 El **numero de reserva** será otrogado automaticamente por el sistema al usuario.
 
 ---
